@@ -1,12 +1,5 @@
 import type { Metadata } from "next";
-import { Noto_Sans_KR } from "next/font/google";
 import "./globals.css";
-
-const notoSansKR = Noto_Sans_KR({
-  subsets: ["latin"],
-  weight: ["400", "500", "700"],
-  variable: "--font-noto-sans-kr",
-});
 
 export const metadata: Metadata = {
   title: "하우투AI - 유용한 AI 팁과 활용법",
@@ -74,7 +67,7 @@ export default function RootLayout({
           }}
         />
       </head>
-      <body className={`${notoSansKR.variable} font-sans antialiased bg-gray-50`}>
+      <body className="font-sans antialiased bg-gray-50">
         {children}
       </body>
     </html>
