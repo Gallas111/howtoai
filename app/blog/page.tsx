@@ -57,6 +57,14 @@ const blogPosts = [
     category: 'ChatGPT',
     readTime: '9분',
   },
+  {
+    id: 7,
+    title: 'ChatGPT로 그림 그리는 방법 - DALL-E 완벽 가이드',
+    excerpt: 'ChatGPT에 내장된 DALL-E 기능으로 멋진 이미지를 생성하는 방법을 알아봅니다. 프롬프트 작성 팁부터 실전 예제까지 모두 공개!',
+    date: '2026-01-20',
+    category: 'ChatGPT',
+    readTime: '7분',
+  },
 ];
 
 export default function BlogPage() {
