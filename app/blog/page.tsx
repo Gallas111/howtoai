@@ -1,5 +1,4 @@
 import Link from 'next/link';
-import Image from 'next/image';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 import AdSense from '@/components/AdSense';
@@ -118,11 +117,10 @@ export default function BlogPage() {
               >
                 <Link href={`/blog/${post.id}`}>
                   <div className="relative aspect-video overflow-hidden">
-                    <Image
+                    <img
                       src={post.thumbnail}
                       alt={post.title}
-                      fill
-                      className="object-cover group-hover:scale-110 transition-transform duration-500"
+                      className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
                     />
                     <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
                   </div>
