@@ -180,8 +180,9 @@ ChatGPT의 DALL-E 기능을 활용하면 누구나 쉽게 멋진 이미지를 �
   return posts[id] || null;
 };
 
-export async function generateMetadata({ params }: { params: { id: string } }) {
-  const post = getBlogPost(params.id);
+export async function generateMetadata({ params }: { params: Promise<{ id: string }> }) {
+  const { id } = await params;
+  const post = getBlogPost(id);
 
   if (!post) {
     return {
@@ -202,8 +203,9 @@ export async function generateMetadata({ params }: { params: { id: string } }) {
   };
 }
 
-export default function BlogPostPage({ params }: { params: { id: string } }) {
-  const post = getBlogPost(params.id);
+export default async function BlogPostPage({ params }: { params: Promise<{ id: string }> }) {
+  const { id } = await params;
+  const post = getBlogPost(id);
 
   if (!post) {
     return (
