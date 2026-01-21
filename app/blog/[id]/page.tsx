@@ -1,4 +1,8 @@
 import Link from 'next/link';
+import Image from 'next/image';
+import ReactMarkdown from 'react-markdown';
+import remarkGfm from 'remark-gfm';
+import rehypeRaw from 'rehype-raw';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 import AdSense from '@/components/AdSense';
@@ -9,6 +13,7 @@ const getBlogPost = (id: string) => {
     '1': {
       id: 1,
       title: 'ChatGPT를 활용한 업무 자동화 완벽 가이드',
+      thumbnail: 'https://images.unsplash.com/photo-1677442136019-21780ecad995?w=1200&h=600&fit=crop',
       content: `
 # ChatGPT를 활용한 업무 자동화 완벽 가이드
 
@@ -57,6 +62,7 @@ ChatGPT를 효과적으로 활용하면 반복적인 업무에서 벗어나 더 
     '7': {
       id: 7,
       title: 'ChatGPT로 그림 그리는 방법 - DALL-E 완벽 가이드',
+      thumbnail: 'https://images.unsplash.com/photo-1686191128892-c0708c22d444?w=1200&h=600&fit=crop',
       content: `
 # ChatGPT로 그림 그리는 방법: DALL-E 3 완벽 가이드 (2026년 최신)
 
@@ -531,51 +537,79 @@ export default async function BlogPostPage({ params }: { params: Promise<{ id: s
           </div>
 
           {/* 썸네일 이미지 */}
-          <div className="aspect-video bg-gradient-to-br from-indigo-400 to-purple-500 rounded-lg mb-8" />
+          {post.thumbnail && (
+            <div className="relative aspect-video rounded-xl overflow-hidden mb-8 shadow-xl">
+              <Image
+                src={post.thumbnail}
+                alt={post.title}
+                fill
+                className="object-cover"
+                priority
+              />
+            </div>
+          )}
 
           {/* 광고 */}
           <AdSense adSlot="3333333333" />
 
           {/* 포스트 내용 */}
-          <div className="bg-white dark:bg-slate-900 rounded-lg shadow-sm p-8 mb-8">
-            <div className="prose prose-lg dark:prose-invert max-w-none">
-              <div
-                className="whitespace-pre-wrap text-gray-800 dark:text-gray-200 leading-relaxed"
-                dangerouslySetInnerHTML={{ __html: post.content.replace(/\n/g, '<br />') }}
-              />
-            </div>
+          <div className="bg-white dark:bg-slate-900 rounded-xl shadow-lg p-8 md:p-12 mb-8">
+            <article className="markdown-content">
+              <ReactMarkdown
+                remarkPlugins={[remarkGfm]}
+                rehypePlugins={[rehypeRaw]}
+                components={{
+                  img: ({ node, ...props }) => {
+                    const src = typeof props.src === 'string' ? props.src : '';
+                    const alt = typeof props.alt === 'string' ? props.alt : '';
+                    return (
+                      <span className="block relative w-full aspect-video my-8">
+                        <Image
+                          src={src}
+                          alt={alt}
+                          fill
+                          className="object-cover rounded-lg"
+                        />
+                      </span>
+                    );
+                  },
+                }}
+              >
+                {post.content}
+              </ReactMarkdown>
+            </article>
           </div>
 
           {/* 광고 */}
           <AdSense adSlot="4444444444" />
 
           {/* 공유 버튼 */}
-          <div className="bg-white dark:bg-slate-900 rounded-lg shadow-sm p-6 mb-8">
-            <h3 className="text-lg font-semibold text-gray-900 dark:text-white mb-4">
+          <div className="bg-white dark:bg-slate-900 rounded-xl shadow-lg p-6 mb-8">
+            <h3 className="text-lg font-bold text-gray-900 dark:text-white mb-4">
               이 글 공유하기
             </h3>
-            <div className="flex gap-3">
-              <button className="px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors">
+            <div className="flex flex-wrap gap-3">
+              <button className="px-5 py-2.5 bg-blue-600 text-white rounded-lg hover:bg-blue-700 hover:shadow-md transform hover:-translate-y-0.5 transition-all duration-200 font-medium">
                 Facebook
               </button>
-              <button className="px-4 py-2 bg-sky-500 text-white rounded-lg hover:bg-sky-600 transition-colors">
+              <button className="px-5 py-2.5 bg-sky-500 text-white rounded-lg hover:bg-sky-600 hover:shadow-md transform hover:-translate-y-0.5 transition-all duration-200 font-medium">
                 Twitter
               </button>
-              <button className="px-4 py-2 bg-green-600 text-white rounded-lg hover:bg-green-700 transition-colors">
+              <button className="px-5 py-2.5 bg-green-600 text-white rounded-lg hover:bg-green-700 hover:shadow-md transform hover:-translate-y-0.5 transition-all duration-200 font-medium">
                 카카오톡
               </button>
-              <button className="px-4 py-2 bg-gray-200 dark:bg-slate-700 text-gray-700 dark:text-gray-300 rounded-lg hover:bg-gray-300 dark:hover:bg-slate-600 transition-colors">
+              <button className="px-5 py-2.5 bg-gray-200 dark:bg-slate-700 text-gray-700 dark:text-gray-300 rounded-lg hover:bg-gray-300 dark:hover:bg-slate-600 hover:shadow-md transform hover:-translate-y-0.5 transition-all duration-200 font-medium">
                 링크 복사
               </button>
             </div>
           </div>
 
           {/* 관련 포스트 */}
-          <div className="bg-white dark:bg-slate-900 rounded-lg shadow-sm p-6">
-            <h3 className="text-lg font-semibold text-gray-900 dark:text-white mb-4">
+          <div className="bg-white dark:bg-slate-900 rounded-xl shadow-lg p-6">
+            <h3 className="text-lg font-bold text-gray-900 dark:text-white mb-4">
               관련 포스트
             </h3>
-            <div className="space-y-4">
+            <div className="space-y-3">
               {[
                 { id: 2, title: '2024년 꼭 알아야 할 무료 AI 도구 TOP 10' },
                 { id: 3, title: 'AI 프롬프트 엔지니어링 실전 가이드' },
@@ -583,9 +617,9 @@ export default async function BlogPostPage({ params }: { params: Promise<{ id: s
                 <Link
                   key={relatedPost.id}
                   href={`/blog/${relatedPost.id}`}
-                  className="block p-4 bg-gray-50 dark:bg-slate-800 rounded-lg hover:bg-gray-100 dark:hover:bg-slate-700 transition-colors"
+                  className="block p-5 bg-gradient-to-r from-gray-50 to-gray-100 dark:from-slate-800 dark:to-slate-700 rounded-lg hover:from-indigo-50 hover:to-purple-50 dark:hover:from-slate-700 dark:hover:to-slate-600 hover:shadow-md transform hover:-translate-x-1 transition-all duration-200 border border-transparent hover:border-indigo-200 dark:hover:border-indigo-800"
                 >
-                  <h4 className="font-medium text-gray-900 dark:text-white">
+                  <h4 className="font-semibold text-gray-900 dark:text-white group-hover:text-indigo-600">
                     {relatedPost.title}
                   </h4>
                 </Link>
