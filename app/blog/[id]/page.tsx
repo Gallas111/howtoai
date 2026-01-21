@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import Image from 'next/image';
 import ReactMarkdown from 'react-markdown';
 import remarkGfm from 'remark-gfm';
 import rehypeRaw from 'rehype-raw';
@@ -538,10 +539,13 @@ export default async function BlogPostPage({ params }: { params: Promise<{ id: s
           {/* 썸네일 이미지 */}
           {post.thumbnail && (
             <div className="relative w-full aspect-video rounded-xl overflow-hidden mb-8 shadow-xl">
-              <img
+              <Image
                 src={post.thumbnail}
                 alt={post.title}
+                width={1200}
+                height={600}
                 className="w-full h-full object-cover"
+                priority
               />
             </div>
           )}
