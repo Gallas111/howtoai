@@ -563,14 +563,16 @@ export default async function BlogPostPage({ params }: { params: Promise<{ id: s
                     const src = typeof props.src === 'string' ? props.src : '';
                     const alt = typeof props.alt === 'string' ? props.alt : '';
                     return (
-                      <span className="block relative w-full aspect-video my-8">
+                      <div className="relative w-full my-8 rounded-lg overflow-hidden" style={{ minHeight: '400px' }}>
                         <Image
                           src={src}
                           alt={alt}
-                          fill
-                          className="object-cover rounded-lg"
+                          width={800}
+                          height={400}
+                          className="w-full h-auto rounded-lg"
+                          unoptimized
                         />
-                      </span>
+                      </div>
                     );
                   },
                 }}
