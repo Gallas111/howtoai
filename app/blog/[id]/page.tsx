@@ -563,14 +563,12 @@ export default async function BlogPostPage({ params }: { params: Promise<{ id: s
                     const src = typeof props.src === 'string' ? props.src : '';
                     const alt = typeof props.alt === 'string' ? props.alt : '';
                     return (
-                      <div className="relative w-full my-8 rounded-lg overflow-hidden" style={{ minHeight: '400px' }}>
-                        <Image
+                      <div className="relative w-full my-8 rounded-lg overflow-hidden">
+                        <img
                           src={src}
                           alt={alt}
-                          width={800}
-                          height={400}
                           className="w-full h-auto rounded-lg"
-                          unoptimized
+                          loading="lazy"
                         />
                       </div>
                     );
