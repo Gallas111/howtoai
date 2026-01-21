@@ -59,11 +59,11 @@ const blogPosts = [
   },
   {
     id: 7,
-    title: 'ChatGPT로 그림 그리는 방법 - DALL-E 완벽 가이드',
-    excerpt: 'ChatGPT에 내장된 DALL-E 기능으로 멋진 이미지를 생성하는 방법을 알아봅니다. 프롬프트 작성 팁부터 실전 예제까지 모두 공개!',
+    title: 'ChatGPT로 그림 그리는 방법: DALL-E 3 완벽 가이드 (2026년 최신)',
+    excerpt: 'ChatGPT Plus의 DALL-E 3로 전문가 수준의 AI 이미지를 생성하는 방법을 단계별로 알아봅니다. 프로 수준 프롬프트 작성법, 실전 예시 10가지, 상업적 이용 가이드까지 완벽 정리!',
     date: '2026-01-20',
     category: 'ChatGPT',
-    readTime: '7분',
+    readTime: '15분',
   },
 ];
 
