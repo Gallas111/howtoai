@@ -17,7 +17,7 @@ const blogPosts = [
     date: '2024-01-15',
     category: 'ChatGPT',
     readTime: '5분',
-    thumbnail: 'https://images.unsplash.com/photo-1677442136019-21780ecad995?w=800&h=400&fit=crop',
+    thumbnail: 'https://images.unsplash.com/photo-1677442136019-21780ecad995?w=800&h=400',
   },
   {
     id: 2,
@@ -26,7 +26,7 @@ const blogPosts = [
     date: '2024-01-14',
     category: 'AI 도구',
     readTime: '8분',
-    thumbnail: 'https://images.unsplash.com/photo-1451187580459-43490279c0fa?w=800&h=400&fit=crop',
+    thumbnail: 'https://images.unsplash.com/photo-1620712943543-bcc4688e7485?w=800&h=400',
   },
   {
     id: 3,
@@ -35,7 +35,7 @@ const blogPosts = [
     date: '2024-01-13',
     category: '프롬프트',
     readTime: '10분',
-    thumbnail: 'https://images.unsplash.com/photo-1655720828018-edd2daec9349?w=800&h=400&fit=crop',
+    thumbnail: 'https://images.unsplash.com/photo-1655720828018-edd2daec9349?w=800&h=400',
   },
   {
     id: 4,
@@ -44,7 +44,7 @@ const blogPosts = [
     date: '2024-01-12',
     category: 'AI 도구',
     readTime: '7분',
-    thumbnail: 'https://images.unsplash.com/photo-1682687220742-aba13b6e50ba?w=800&h=400&fit=crop',
+    thumbnail: 'https://images.unsplash.com/photo-1682687220742-aba13b6e50ba?w=800&h=400',
   },
   {
     id: 5,
@@ -53,7 +53,7 @@ const blogPosts = [
     date: '2024-01-11',
     category: '활용법',
     readTime: '6분',
-    thumbnail: 'https://images.unsplash.com/photo-1499750310107-5fef28a66643?w=800&h=400&fit=crop',
+    thumbnail: 'https://images.unsplash.com/photo-1499750310107-5fef28a66643?w=800&h=400',
   },
   {
     id: 6,
@@ -62,7 +62,7 @@ const blogPosts = [
     date: '2024-01-10',
     category: 'ChatGPT',
     readTime: '9분',
-    thumbnail: 'https://images.unsplash.com/photo-1633356122544-f134324a6cee?w=800&h=400&fit=crop',
+    thumbnail: 'https://images.unsplash.com/photo-1633356122544-f134324a6cee?w=800&h=400',
   },
   {
     id: 7,
@@ -71,7 +71,7 @@ const blogPosts = [
     date: '2026-01-20',
     category: 'ChatGPT',
     readTime: '15분',
-    thumbnail: 'https://images.unsplash.com/photo-1735786790522-0cf8c2fafa6f?w=800&h=400&fit=crop',
+    thumbnail: 'https://images.unsplash.com/photo-1735786790522-0cf8c2fafa6f?w=800&h=400',
   },
 ];
 
