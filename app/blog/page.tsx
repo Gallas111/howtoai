@@ -71,7 +71,7 @@ const blogPosts = [
     date: '2026-01-20',
     category: 'ChatGPT',
     readTime: '15분',
-    thumbnail: 'https://images.unsplash.com/photo-1547826039-bfc35e0f1ea8?w=800&h=400&fit=crop',
+    thumbnail: 'https://images.unsplash.com/photo-1735786790522-0cf8c2fafa6f?w=800&h=400&fit=crop',
   },
 ];
 

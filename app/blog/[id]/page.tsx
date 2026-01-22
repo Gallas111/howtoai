@@ -62,7 +62,7 @@ ChatGPT를 효과적으로 활용하면 반복적인 업무에서 벗어나 더 
     '7': {
       id: 7,
       title: 'ChatGPT로 그림 그리는 방법 - DALL-E 완벽 가이드',
-      thumbnail: 'https://images.unsplash.com/photo-1547826039-bfc35e0f1ea8?w=1200&h=600&fit=crop',
+      thumbnail: 'https://images.unsplash.com/photo-1735786790522-0cf8c2fafa6f?w=1200&h=600&fit=crop',
       content: `
 # ChatGPT로 그림 그리는 방법: DALL-E 3 완벽 가이드 (2026년 최신)
 
@@ -81,7 +81,7 @@ DALL-E 3는 OpenAI가 개발한 최첨단 AI 이미지 생성 모델입니다. 2
 - **안전성**: 유해 콘텐츠 생성 방지 기능 내장
 - **무료 사용**: ChatGPT Plus 구독자는 추가 비용 없이 이용
 
-![AI가 생성한 다양한 이미지 예시](https://images.unsplash.com/photo-1547826039-bfc35e0f1ea8?w=800&h=400&fit=crop)
+![AI가 생성한 다양한 이미지 예시](https://images.unsplash.com/photo-1735786790522-0cf8c2fafa6f?w=800&h=400&fit=crop)
 
 ## ChatGPT에서 DALL-E 사용하는 방법 (단계별 가이드)
 
