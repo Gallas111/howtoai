@@ -542,9 +542,9 @@ export default async function BlogPostPage({ params }: { params: Promise<{ id: s
               <Image
                 src={post.thumbnail}
                 alt={post.title}
-                width={1200}
-                height={600}
-                className="w-full h-full object-cover"
+                fill
+                sizes="100vw"
+                className="object-cover"
                 priority
               />
             </div>
