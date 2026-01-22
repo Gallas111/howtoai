@@ -71,7 +71,7 @@ const blogPosts = [
     date: '2026-01-20',
     category: 'ChatGPT',
     readTime: '15분',
-    thumbnail: 'https://images.unsplash.com/photo-1686191128892-c0708c22d444?w=800&h=400&fit=crop',
+    thumbnail: 'https://images.unsplash.com/photo-1547826039-bfc35e0f1ea8?w=800&h=400&fit=crop',
   },
 ];
 
@@ -122,6 +122,7 @@ export default function BlogPage() {
                       src={post.thumbnail}
                       alt={post.title}
                       fill
+                      sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                       className="object-cover group-hover:scale-110 transition-transform duration-500"
                     />
                     <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
