@@ -26,7 +26,7 @@ const blogPosts = [
     date: '2024-01-14',
     category: 'AI 도구',
     readTime: '8분',
-    thumbnail: 'https://images.unsplash.com/photo-1676277791608-ac54525aa94f?w=800&h=400&fit=crop',
+    thumbnail: 'https://images.unsplash.com/photo-1633356122544-f134324a6cee?w=800&h=400&fit=crop',
   },
   {
     id: 3,
