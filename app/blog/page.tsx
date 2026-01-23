@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import Image from 'next/image';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 import AdSense from '@/components/AdSense';
@@ -16,6 +17,7 @@ const blogPosts = [
     date: '2024-01-15',
     category: 'ChatGPT',
     readTime: '5분',
+    thumbnail: 'https://images.unsplash.com/photo-1677442136019-21780ecad995?w=800&h=400&fit=crop',
   },
   {
     id: 2,
@@ -24,6 +26,7 @@ const blogPosts = [
     date: '2024-01-14',
     category: 'AI 도구',
     readTime: '8분',
+    thumbnail: 'https://images.unsplash.com/photo-1676277791608-ac54525aa94f?w=800&h=400&fit=crop',
   },
   {
     id: 3,
@@ -32,6 +35,7 @@ const blogPosts = [
     date: '2024-01-13',
     category: '프롬프트',
     readTime: '10분',
+    thumbnail: 'https://images.unsplash.com/photo-1655720828018-edd2daec9349?w=800&h=400&fit=crop',
   },
   {
     id: 4,
@@ -40,6 +44,7 @@ const blogPosts = [
     date: '2024-01-12',
     category: 'AI 도구',
     readTime: '7분',
+    thumbnail: 'https://images.unsplash.com/photo-1682687220742-aba13b6e50ba?w=800&h=400&fit=crop',
   },
   {
     id: 5,
@@ -48,6 +53,7 @@ const blogPosts = [
     date: '2024-01-11',
     category: '활용법',
     readTime: '6분',
+    thumbnail: 'https://images.unsplash.com/photo-1499750310107-5fef28a66643?w=800&h=400&fit=crop',
   },
   {
     id: 6,
@@ -56,14 +62,16 @@ const blogPosts = [
     date: '2024-01-10',
     category: 'ChatGPT',
     readTime: '9분',
+    thumbnail: 'https://images.unsplash.com/photo-1633356122544-f134324a6cee?w=800&h=400&fit=crop',
   },
   {
     id: 7,
-    title: 'ChatGPT로 그림 그리는 방법 - DALL-E 완벽 가이드',
-    excerpt: 'ChatGPT에 내장된 DALL-E 기능으로 멋진 이미지를 생성하는 방법을 알아봅니다. 프롬프트 작성 팁부터 실전 예제까지 모두 공개!',
+    title: 'ChatGPT로 그림 그리는 방법: DALL-E 3 완벽 가이드 (2026년 최신)',
+    excerpt: 'ChatGPT Plus의 DALL-E 3로 전문가 수준의 AI 이미지를 생성하는 방법을 단계별로 알아봅니다. 프로 수준 프롬프트 작성법, 실전 예시 10가지, 상업적 이용 가이드까지 완벽 정리!',
     date: '2026-01-20',
     category: 'ChatGPT',
-    readTime: '7분',
+    readTime: '15분',
+    thumbnail: 'https://images.unsplash.com/photo-1547826039-bfc35e0f1ea8?w=800&h=400&fit=crop',
   },
 ];
 
@@ -85,13 +93,13 @@ export default function BlogPage() {
 
           {/* 카테고리 필터 */}
           <div className="flex flex-wrap gap-3 mb-8">
-            <button className="px-4 py-2 rounded-full bg-indigo-600 text-white font-medium">
+            <button className="px-5 py-2.5 rounded-full bg-gradient-to-r from-indigo-600 to-purple-600 text-white font-semibold shadow-md hover:shadow-lg transform hover:-translate-y-0.5 transition-all duration-200">
               전체
             </button>
             {['ChatGPT', 'AI 도구', '프롬프트', '활용법'].map((category) => (
               <button
                 key={category}
-                className="px-4 py-2 rounded-full bg-white dark:bg-slate-900 text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-slate-700 font-medium transition-colors"
+                className="px-5 py-2.5 rounded-full bg-white dark:bg-slate-900 text-gray-700 dark:text-gray-300 hover:bg-gradient-to-r hover:from-indigo-50 hover:to-purple-50 dark:hover:from-slate-800 dark:hover:to-slate-700 font-semibold shadow-sm hover:shadow-md transform hover:-translate-y-0.5 transition-all duration-200 border border-gray-200 dark:border-slate-700"
               >
                 {category}
               </button>
@@ -106,24 +114,33 @@ export default function BlogPage() {
             {blogPosts.map((post) => (
               <article
                 key={post.id}
-                className="bg-white dark:bg-slate-900 rounded-lg shadow-md hover:shadow-xl transition-shadow overflow-hidden group"
+                className="bg-white dark:bg-slate-900 rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300 overflow-hidden group transform hover:-translate-y-2"
               >
                 <Link href={`/blog/${post.id}`}>
-                  <div className="aspect-video bg-gradient-to-br from-indigo-400 to-purple-500 group-hover:scale-105 transition-transform duration-300" />
+                  <div className="relative aspect-video overflow-hidden">
+                    <Image
+                      src={post.thumbnail}
+                      alt={post.title}
+                      fill
+                      sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                      className="object-cover group-hover:scale-110 transition-transform duration-500"
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+                  </div>
                   <div className="p-6">
-                    <div className="flex items-center gap-4 text-sm text-gray-600 dark:text-gray-400 mb-3">
-                      <span className="bg-indigo-100 dark:bg-indigo-900 text-indigo-600 dark:text-indigo-300 px-3 py-1 rounded-full font-medium">
+                    <div className="flex items-center gap-3 text-sm text-gray-600 dark:text-gray-400 mb-3">
+                      <span className="bg-gradient-to-r from-indigo-100 to-purple-100 dark:from-indigo-900 dark:to-purple-900 text-indigo-700 dark:text-indigo-300 px-3 py-1 rounded-full font-semibold text-xs">
                         {post.category}
                       </span>
-                      <span>{post.readTime}</span>
+                      <span className="font-medium">{post.readTime}</span>
                     </div>
-                    <h2 className="text-xl font-bold text-gray-900 dark:text-white mb-3 group-hover:text-indigo-600 dark:group-hover:text-indigo-400 transition-colors">
+                    <h2 className="text-xl font-bold text-gray-900 dark:text-white mb-3 group-hover:text-indigo-600 dark:group-hover:text-indigo-400 transition-colors leading-tight">
                       {post.title}
                     </h2>
-                    <p className="text-gray-600 dark:text-gray-400 mb-4 line-clamp-2">
+                    <p className="text-gray-600 dark:text-gray-400 mb-4 line-clamp-2 leading-relaxed">
                       {post.excerpt}
                     </p>
-                    <time className="text-sm text-gray-500 dark:text-gray-500">
+                    <time className="text-sm text-gray-500 dark:text-gray-500 font-medium">
                       {post.date}
                     </time>
                   </div>
@@ -136,14 +153,14 @@ export default function BlogPage() {
           <AdSense adSlot="2222222222" />
 
           {/* 페이지네이션 */}
-          <div className="flex justify-center gap-2 mt-12">
-            <button className="px-4 py-2 bg-indigo-600 text-white rounded-lg font-medium">
+          <div className="flex justify-center gap-3 mt-12">
+            <button className="px-5 py-2.5 bg-gradient-to-r from-indigo-600 to-purple-600 text-white rounded-lg font-semibold shadow-md hover:shadow-lg transform hover:-translate-y-0.5 transition-all duration-200">
               1
             </button>
-            <button className="px-4 py-2 bg-white dark:bg-slate-900 text-gray-700 dark:text-gray-300 rounded-lg hover:bg-gray-100 dark:hover:bg-slate-700 font-medium">
+            <button className="px-5 py-2.5 bg-white dark:bg-slate-900 text-gray-700 dark:text-gray-300 rounded-lg hover:bg-gradient-to-r hover:from-indigo-50 hover:to-purple-50 dark:hover:from-slate-800 dark:hover:to-slate-700 font-semibold shadow-sm hover:shadow-md transform hover:-translate-y-0.5 transition-all duration-200 border border-gray-200 dark:border-slate-700">
               2
             </button>
-            <button className="px-4 py-2 bg-white dark:bg-slate-900 text-gray-700 dark:text-gray-300 rounded-lg hover:bg-gray-100 dark:hover:bg-slate-700 font-medium">
+            <button className="px-5 py-2.5 bg-white dark:bg-slate-900 text-gray-700 dark:text-gray-300 rounded-lg hover:bg-gradient-to-r hover:from-indigo-50 hover:to-purple-50 dark:hover:from-slate-800 dark:hover:to-slate-700 font-semibold shadow-sm hover:shadow-md transform hover:-translate-y-0.5 transition-all duration-200 border border-gray-200 dark:border-slate-700">
               3
             </button>
           </div>
