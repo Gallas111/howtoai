@@ -2754,6 +2754,18 @@ ChatGPT의 DALL-E 3는 누구나 쉽게 전문가 수준의 이미지를 만들 
   return posts[id] || null;
 };
 
+export async function generateStaticParams() {
+  return [
+    { id: '1' },
+    { id: '2' },
+    { id: '3' },
+    { id: '4' },
+    { id: '5' },
+    { id: '6' },
+    { id: '7' },
+  ];
+}
+
 export async function generateMetadata({ params }: { params: Promise<{ id: string }> }) {
   const { id } = await params;
   const post = getBlogPost(id);
