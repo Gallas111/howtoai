@@ -62,13 +62,13 @@ ChatGPT를 효과적으로 활용하면 반복적인 업무에서 벗어나 더 
     '2': {
       id: 2,
       title: '2024년 꼭 알아야 할 무료 AI 도구 TOP 10',
-      thumbnail: 'https://images.unsplash.com/photo-1620712943543-bcc4688e7485?auto=format&fit=crop&w=1200&q=80',
+      thumbnail: 'https://images.unsplash.com/photo-1485827404703-89b55fcc595e?auto=format&fit=crop&w=1200&q=80',
       content: `
 # 2024년 꼭 알아야 할 무료 AI 도구 TOP 10
 
 2024년 현재, AI 기술은 더 이상 거대 기업이나 전문가들만의 전유물이 아닙니다. 누구나 무료로 사용할 수 있는 강력한 AI 도구들이 넘쳐나고 있습니다. 이 글에서는 업무 효율성을 극대화하고 창의적인 작업을 도와줄 최고의 무료 AI 도구 10가지를 소개합니다.
 
-![AI 도구 모음](https://images.unsplash.com/photo-1620712943543-bcc4688e7485?auto=format&fit=crop&w=800&q=80)
+![AI 도구 모음](https://images.unsplash.com/photo-1485827404703-89b55fcc595e?auto=format&fit=crop&w=800&q=80)
 
 ## 왜 무료 AI 도구를 사용해야 할까?
 
