@@ -3292,6 +3292,19 @@ ChatGPT 플러그인은 AI의 가능성을 무한히 확장합니다. 오늘 소
   return posts[id] || null;
 };
 
+// Generate static params for all blog posts
+export async function generateStaticParams() {
+  // Return all possible blog post IDs
+  return [
+    { id: '1' },
+    { id: '2' },
+    { id: '3' },
+    { id: '4' },
+    { id: '5' },
+    { id: '6' },
+  ];
+}
+
 export async function generateMetadata({ params }: { params: Promise<{ id: string }> }) {
   const { id } = await params;
   const post = getBlogPost(id);
