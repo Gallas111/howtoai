@@ -3309,7 +3309,7 @@ export async function generateStaticParams() {
     { id: '6' },
   ];
 
-  console.log('[BUILD] generateStaticParams called, params:', params);
+  console.log('[BUILD] params', params);
   return params;
 }
 
@@ -3358,7 +3358,9 @@ export async function generateMetadata({ params }: { params: Promise<{ id: strin
 }
 
 export default async function BlogPostPage({ params }: { params: Promise<{ id: string }> }) {
-  const { id } = await params;
+  const resolvedParams = await params;
+  console.log('[BUILD] BlogPostPage params', resolvedParams);
+  const { id } = resolvedParams;
   const post = getBlogPost(id);
 
   if (!post) {
