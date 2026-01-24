@@ -9,6 +9,7 @@ import AdSense from '@/components/AdSense';
 
 // 실제로는 데이터베이스나 CMS에서 가져올 데이터
 const getBlogPost = (id: string) => {
+  console.log('[BUILD] getBlogPost called with id:', id);
   const posts: { [key: string]: any } = {
     '1': {
       id: 1,
@@ -3289,13 +3290,17 @@ ChatGPT 플러그인은 AI의 가능성을 무한히 확장합니다. 오늘 소
     },
   };
 
+  console.log('[BUILD] Available post IDs:', Object.keys(posts));
+  console.log('[BUILD] Looking for post with id:', id);
+  console.log('[BUILD] Post found:', !!posts[id]);
+
   return posts[id] || null;
 };
 
 // Generate static params for all blog posts
 export async function generateStaticParams() {
   // Return all possible blog post IDs
-  return [
+  const params = [
     { id: '1' },
     { id: '2' },
     { id: '3' },
@@ -3303,6 +3308,9 @@ export async function generateStaticParams() {
     { id: '5' },
     { id: '6' },
   ];
+
+  console.log('[BUILD] generateStaticParams called, params:', params);
+  return params;
 }
 
 export async function generateMetadata({ params }: { params: Promise<{ id: string }> }) {
