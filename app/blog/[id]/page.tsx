@@ -3357,10 +3357,10 @@ export async function generateMetadata({ params }: { params: Promise<{ id: strin
   };
 }
 
-export default async function BlogPostPage({ params }: { params: Promise<{ id: string }> }) {
-  const resolvedParams = await params;
-  console.log('[BUILD] BlogPostPage params', resolvedParams);
-  const { id } = resolvedParams;
+export default async function BlogPostPage({ params }: { params: { id: string } }) {
+  console.log('[BUILD] BlogPostPage params:', params);
+  const { id } = params;
+  console.log('[BUILD] BlogPostPage id:', id);
   const post = getBlogPost(id);
 
   if (!post) {
