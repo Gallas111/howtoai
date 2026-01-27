@@ -9,6 +9,7 @@ import AdSense from '@/components/AdSense';
 
 // 실제로는 데이터베이스나 CMS에서 가져올 데이터
 const getBlogPost = (id: string) => {
+  console.log('[BUILD] getBlogPost called with id:', id);
   const posts: { [key: string]: any } = {
     '1': {
       id: 1,
@@ -101,7 +102,7 @@ ChatGPT는 OpenAI가 개발한 대화형 AI로, 2024년 기준 가장 강력하�
 
 ### 무료 vs 유료 비교
 
-| 기능 | 무료 버전 | Plus 버전 ($20/월) |
+| 기능 | 무료 버전 | Plus 버전 (\$20/월) |
 |------|----------|-------------------|
 | 모델 | GPT-3.5 | GPT-4 + GPT-4o |
 | 응답 속도 | 보통 | 빠름 |
@@ -166,7 +167,7 @@ Midjourney는 완전 무료는 아니지만, Discord 서버에 가입하면 제�
 
 1. Discord 계정 생성
 2. Midjourney 공식 서버 참여
-3. `/imagine` 커맨드 입력 후 원하는 이미지 설명
+3. \`/imagine\` 커맨드 입력 후 원하는 이미지 설명
 4. 약 60초 후 4개의 이미지 생성
 
 ### 프롬프트 작성 팁
@@ -309,7 +310,7 @@ Notion은 이미 강력한 생산성 도구였지만, AI 기능이 추가되면�
 
 ### 무료 체험
 
-Notion AI는 가입 후 20회 무료 사용 가능합니다. 이후 월 $10.
+Notion AI는 가입 후 20회 무료 사용 가능합니다. 이후 월 \$10.
 
 ### Notion AI 활용 시나리오
 
@@ -653,7 +654,7 @@ DALL-E 3는 OpenAI가 개발한 최첨단 AI 이미지 생성 모델입니다. 2
 
 ### 1단계: ChatGPT Plus 구독 확인
 
-DALL-E를 사용하려면 ChatGPT Plus 구독이 필요합니다. 월 $20으로 무제한 이미지 생성이 가능합니다.
+DALL-E를 사용하려면 ChatGPT Plus 구독이 필요합니다. 월 \$20으로 무제한 이미지 생성이 가능합니다.
 
 **확인 방법:**
 1. ChatGPT (chat.openai.com) 접속
@@ -953,7 +954,7 @@ OpenAI 정책에 따르면:
 
 ### Q1. DALL-E 3는 무료인가요?
 
-ChatGPT Plus 구독($20/월) 시 무제한 사용 가능합니다. 별도의 추가 비용은 없습니다.
+ChatGPT Plus 구독(\$20/월) 시 무제한 사용 가능합니다. 별도의 추가 비용은 없습니다.
 
 ### Q2. 생성된 이미지의 해상도는?
 
@@ -2331,7 +2332,7 @@ SEO 최적화된 아웃라인을 작성해주세요.
 
 ### 아웃라인 예시
 
-```markdown
+\`\`\`markdown
 # [메인 키워드]: 완벽 가이드
 
 ## 소개 (200자)
@@ -2363,7 +2364,7 @@ SEO 최적화된 아웃라인을 작성해주세요.
 - 요약
 - 행동 촉구
 - 다음 단계
-```
+\`\`\`
 
 ---
 
@@ -2620,7 +2621,7 @@ ChatGPT에게:
 
 자주 사용하는 프롬프트를 저장:
 
-```
+\`\`\`
 📁 나의 프롬프트 라이브러리/
 ├─ 주제-발굴.txt
 ├─ 아웃라인-생성.txt
@@ -2628,7 +2629,7 @@ ChatGPT에게:
 ├─ 결론-작성.txt
 ├─ SEO-최적화.txt
 └─ 편집-검토.txt
-```
+\`\`\`
 
 ### 3. 일관된 톤 유지
 
@@ -3289,8 +3290,29 @@ ChatGPT 플러그인은 AI의 가능성을 무한히 확장합니다. 오늘 소
     },
   };
 
+  console.log('[BUILD] Available post IDs:', Object.keys(posts));
+  console.log('[BUILD] Looking for post with id:', id);
+  console.log('[BUILD] Post found:', !!posts[id]);
+
   return posts[id] || null;
 };
+
+// Generate static params for all blog posts
+export async function generateStaticParams() {
+  // Return all possible blog post IDs
+  const params = [
+    { id: '1' },
+    { id: '2' },
+    { id: '3' },
+    { id: '4' },
+    { id: '5' },
+    { id: '6' },
+    { id: '7' },
+  ];
+
+  console.log('[BUILD] params', params);
+  return params;
+}
 
 export async function generateMetadata({ params }: { params: Promise<{ id: string }> }) {
   const { id } = await params;
@@ -3337,7 +3359,9 @@ export async function generateMetadata({ params }: { params: Promise<{ id: strin
 }
 
 export default async function BlogPostPage({ params }: { params: Promise<{ id: string }> }) {
+  console.log('[BUILD] BlogPostPage params:', params);
   const { id } = await params;
+  console.log('[BUILD] BlogPostPage id:', id);
   const post = getBlogPost(id);
 
   if (!post) {
