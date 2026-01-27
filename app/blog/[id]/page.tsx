@@ -14,7 +14,7 @@ const getBlogPost = (id: string) => {
     '1': {
       id: 1,
       title: 'ChatGPT를 활용한 업무 자동화 완벽 가이드',
-      thumbnail: 'https://images.unsplash.com/photo-1677442136019-21780ecad995?w=1200&h=600&fit=crop',
+      thumbnail: '/blog/chatgpt-automation-guide/thumbnail.jpg',
       content: `
 # ChatGPT를 활용한 업무 자동화 완벽 가이드
 
@@ -63,7 +63,7 @@ ChatGPT를 효과적으로 활용하면 반복적인 업무에서 벗어나 더 
     '2': {
       id: 2,
       title: '2024년 꼭 알아야 할 무료 AI 도구 TOP 10',
-      thumbnail: 'https://images.unsplash.com/photo-1676277791608-ac54525aa94f?w=1200&h=600&fit=crop',
+      thumbnail: '/blog/free-ai-tools-2024/thumbnail.jpg',
       content: `
 # 2024년 꼭 알아야 할 무료 AI 도구 TOP 10
 
@@ -71,7 +71,7 @@ ChatGPT를 효과적으로 활용하면 반복적인 업무에서 벗어나 더 
 
 2024년 현재, AI는 이미지 생성부터 텍스트 작성, 동영상 편집, 음성 합성까지 거의 모든 분야에서 활용되고 있습니다. 이 가이드에서는 실제로 사용해보고 검증된 최고의 무료 AI 도구들을 카테고리별로 정리했습니다.
 
-![AI 도구 활용 이미지](https://images.unsplash.com/photo-1676277791608-ac54525aa94f?w=800&h=400&fit=crop)
+![2024년 무료 AI 도구 모음과 인공지능 기반 업무 자동화 솔루션](/blog/free-ai-tools-2024/ai-tools-overview.jpg)
 
 ## 왜 지금 AI 도구를 배워야 할까요?
 
@@ -88,7 +88,7 @@ AI 도구를 활용하면 다음과 같은 이점을 얻을 수 있습니다:
 
 ## 1. ChatGPT - 최강의 AI 챗봇
 
-![ChatGPT 인터페이스](https://images.unsplash.com/photo-1677442136019-21780ecad995?w=800&h=400&fit=crop)
+![ChatGPT 무료 버전 인터페이스 및 프롬프트 작성 화면](/blog/free-ai-tools-2024/chatgpt-interface.jpg)
 
 ### 핵심 기능
 
@@ -153,7 +153,7 @@ ChatGPT는 OpenAI가 개발한 대화형 AI로, 2024년 기준 가장 강력하�
 
 ## 3. Midjourney - AI 이미지 생성의 정점
 
-![AI 생성 이미지 예시](https://images.unsplash.com/photo-1686191128657-a7c14b0e1f05?w=800&h=400&fit=crop)
+![Midjourney AI로 생성한 고품질 디지털 아트 작품 예시](/blog/free-ai-tools-2024/ai-generated-image.jpg)
 
 ### 핵심 기능
 
@@ -229,7 +229,7 @@ Canva는 원래 온라인 디자인 플랫폼이었지만, 이제 강력한 AI �
 
 ## 5. Runway ML - AI 동영상 편집
 
-![비디오 편집](https://images.unsplash.com/photo-1574717024653-61fd2cf4d44d?w=800&h=400&fit=crop)
+![Runway ML AI 동영상 편집 인터페이스 및 배경 제거 기능](/blog/free-ai-tools-2024/video-editing.jpg)
 
 ### 핵심 기능
 
@@ -296,7 +296,7 @@ ElevenLabs는 사람과 구별이 거의 불가능한 자연스러운 AI 음성�
 
 ## 7. Notion AI - 스마트 노트 필기
 
-![노트 정리](https://images.unsplash.com/photo-1499750310107-5fef28a66643?w=800&h=400&fit=crop)
+![Notion AI 스마트 노트 정리 및 자동 요약 기능 화면](/blog/free-ai-tools-2024/note-taking.jpg)
 
 ### 핵심 기능
 
@@ -378,7 +378,7 @@ Perplexity는 구글과 ChatGPT를 결합한 것 같은 AI 검색 엔진입니�
 
 ## 9. Gamma App - AI 프레젠테이션 제작
 
-![프레젠테이션](https://images.unsplash.com/photo-1557804506-669a67965ba0?w=800&h=400&fit=crop)
+![Gamma App AI 프레젠테이션 자동 생성 및 디자인 템플릿](/blog/free-ai-tools-2024/presentation.jpg)
 
 ### 핵심 기능
 
@@ -629,13 +629,13 @@ AI 도구는 매우 빠르게 발전합니다. 평균적으로 1-3개월마다 �
     '7': {
       id: 7,
       title: 'ChatGPT로 그림 그리는 방법 - DALL-E 완벽 가이드',
-      thumbnail: 'https://images.unsplash.com/photo-1547826039-bfc35e0f1ea8?w=1200&h=600&fit=crop',
+      thumbnail: '/blog/chatgpt-dalle-guide/thumbnail.jpg',
       content: `
 # ChatGPT로 그림 그리는 방법: DALL-E 3 완벽 가이드 (2026년 최신)
 
 2026년 현재, ChatGPT Plus 사용자라면 누구나 강력한 AI 이미지 생성 도구인 DALL-E 3를 무료로 사용할 수 있습니다. 디자인 경험이 전혀 없어도 괜찮습니다. 이 가이드 하나면 오늘부터 바로 전문가 수준의 이미지를 생성할 수 있습니다.
 
-![ChatGPT DALL-E 인터페이스](https://images.unsplash.com/photo-1677442136019-21780ecad995?w=800&h=400&fit=crop)
+![ChatGPT Plus에서 DALL-E 3 이미지 생성 기능 사용 인터페이스](/blog/chatgpt-dalle-guide/chatgpt-interface.jpg)
 
 ## ChatGPT DALL-E란? 초보자도 이해하는 기본 개념
 
@@ -648,7 +648,7 @@ DALL-E 3는 OpenAI가 개발한 최첨단 AI 이미지 생성 모델입니다. 2
 - **안전성**: 유해 콘텐츠 생성 방지 기능 내장
 - **무료 사용**: ChatGPT Plus 구독자는 추가 비용 없이 이용
 
-![AI가 생성한 다양한 이미지 예시](https://images.unsplash.com/photo-1547826039-bfc35e0f1ea8?w=800&h=400&fit=crop)
+![DALL-E로 생성한 다양한 스타일의 AI 아트 이미지 컬렉션](/blog/chatgpt-dalle-guide/ai-examples.jpg)
 
 ## ChatGPT에서 DALL-E 사용하는 방법 (단계별 가이드)
 
@@ -677,7 +677,7 @@ ChatGPT 채팅창에 다음과 같이 입력해보세요:
 - 우클릭으로 저장 가능
 - 1024x1024 또는 1792x1024 픽셀 해상도
 
-![DALL-E로 생성된 풍경 이미지](https://images.unsplash.com/photo-1682687220742-aba13b6e50ba?w=800&h=400&fit=crop)
+![AI 프롬프트로 생성한 고품질 자연 풍경 이미지](/blog/chatgpt-dalle-guide/landscape.jpg)
 
 ## 프로처럼 프롬프트 작성하는 7가지 비법
 
@@ -742,7 +742,7 @@ ChatGPT 채팅창에 다음과 같이 입력해보세요:
 - "신비롭고 몽환적인 무드"
 - "따뜻하고 아늑한 느낌"
 
-![다양한 스타일의 AI 아트](https://images.unsplash.com/photo-1655720845034-b8f615109b5b?w=800&h=400&fit=crop)
+![수채화 유화 디지털아트 등 다양한 예술 스타일의 AI 생성 이미지](/blog/chatgpt-dalle-guide/art-styles.jpg)
 
 ## 실전 프롬프트 예시 10가지 (복사해서 바로 사용 가능)
 
@@ -796,7 +796,7 @@ ChatGPT 채팅창에 다음과 같이 입력해보세요:
 광활한 우주 공간, 반짝이는 수많은 별들, 화려한 성운, 은하수가 흐르는 밤하늘, 보라색과 파란색의 우주 색감, 4K 고해상도 천체 사진 스타일, 경이롭고 장엄한 느낌
 \`\`\`
 
-![우주 배경 이미지](https://images.unsplash.com/photo-1419242902214-272b3f66ee7a?w=800&h=400&fit=crop)
+![DALL-E로 생성한 우주 은하수 성운 고해상도 배경화면](/blog/chatgpt-dalle-guide/space-background.jpg)
 
 ## 자주하는 실수와 해결 방법
 
@@ -856,7 +856,7 @@ ChatGPT는 대화 컨텍스트를 기억하므로, 기존 이미지를 참조하
 
 각 버전을 비교하여 가장 마음에 드는 것을 선택하세요.
 
-![이미지 수정 과정](https://images.unsplash.com/photo-1633356122544-f134324a6cee?w=800&h=400&fit=crop)
+![ChatGPT에서 AI 생성 이미지 수정 및 반복 생성 과정](/blog/chatgpt-dalle-guide/editing-process.jpg)
 
 ## 저작권 및 상업적 이용 가이드
 
@@ -915,7 +915,7 @@ OpenAI 정책에 따르면:
 14. **인포그래픽**: 정보 전달용 이미지
 15. **학습 카드**: 플래시카드 제작
 
-![비즈니스 활용 예시](https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=800&h=400&fit=crop)
+![DALL-E 이미지 비즈니스 마케팅 프레젠테이션 상업적 활용 사례](/blog/chatgpt-dalle-guide/business-use.jpg)
 
 ## 고급 팁: 전문가처럼 사용하기
 
@@ -1019,7 +1019,7 @@ ChatGPT의 DALL-E 3는 누구나 쉽게 전문가 수준의 이미지를 만들 
     '3': {
       id: 3,
       title: 'AI 프롬프트 엔지니어링 실전 가이드',
-      thumbnail: 'https://images.unsplash.com/photo-1655720828018-edd2daec9349?w=1200&h=600&fit=crop',
+      thumbnail: '/blog/ai-prompt-engineering/thumbnail.jpg',
       content: `
 # AI 프롬프트 엔지니어링 실전 가이드
 
@@ -1027,7 +1027,7 @@ ChatGPT의 DALL-E 3는 누구나 쉽게 전문가 수준의 이미지를 만들 
 
 2024년 현재, 프롬프트 엔지니어링은 AI 시대의 필수 역량으로 자리잡았습니다. 구글, 마이크로소프트 등 주요 기업에서는 '프롬프트 엔지니어' 직무를 신설하고 있으며, 연봉은 1억 원 이상에 달합니다. 이 기술을 배우면 여러분도 AI를 100% 활용할 수 있습니다.
 
-![프롬프트 엔지니어링 개념](https://images.unsplash.com/photo-1655720828018-edd2daec9349?w=800&h=400&fit=crop)
+![AI 프롬프트 엔지니어링 기법 및 ChatGPT 최적화 방법](/blog/ai-prompt-engineering/concept.jpg)
 
 ## 프롬프트 엔지니어링이란?
 
@@ -1147,7 +1147,7 @@ AI에게 배경 정보를 주면 더 적절한 답변을 받을 수 있습니다
 4. 세부 수정: "두 번째 문단을 더 구체적으로 확장해줘"
 5. 최종 검토
 
-![프롬프트 작성 프로세스](https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800&h=400&fit=crop)
+![효과적인 프롬프트 작성 단계별 프로세스 및 반복 개선 방법](/blog/ai-prompt-engineering/process.jpg)
 
 ---
 
@@ -1713,7 +1713,7 @@ Python으로 다음 기능을 구현해주세요:
     '4': {
       id: 4,
       title: 'Midjourney로 전문가처럼 이미지 생성하기',
-      thumbnail: 'https://images.unsplash.com/photo-1682687220742-aba13b6e50ba?w=1200&h=600&fit=crop',
+      thumbnail: '/blog/midjourney-guide/thumbnail.jpg',
       content: `
 # Midjourney로 전문가처럼 이미지 생성하기
 
@@ -1721,7 +1721,7 @@ Midjourney는 텍스트 설명만으로 놀라운 품질의 이미지를 생성�
 
 2024년 현재, Midjourney V6는 이전 버전보다 2배 이상 향상된 품질을 제공하며, 텍스트를 이미지에 정확하게 삽입할 수도 있습니다. 많은 디자이너, 마케터, 크리에이터들이 Midjourney를 활용하여 콘텐츠 제작 시간을 90% 단축하고 있습니다.
 
-![Midjourney 생성 이미지 예시](https://images.unsplash.com/photo-1682687220742-aba13b6e50ba?w=800&h=400&fit=crop)
+![Midjourney V6로 생성한 고품질 AI 아트 및 디지털 일러스트 예시](/blog/midjourney-guide/example.jpg)
 
 ## Midjourney 시작하기
 
@@ -2203,7 +2203,7 @@ Midjourney는 창의성을 현실로 만드는 강력한 도구입니다. 이 �
     '5': {
       id: 5,
       title: 'AI로 블로그 포스팅 10배 빠르게 작성하기',
-      thumbnail: 'https://images.unsplash.com/photo-1499750310107-5fef28a66643?w=1200&h=600&fit=crop',
+      thumbnail: '/blog/ai-blog-writing/thumbnail.jpg',
       content: `
 # AI로 블로그 포스팅 10배 빠르게 작성하기
 
@@ -2211,7 +2211,7 @@ Midjourney는 창의성을 현실로 만드는 강력한 도구입니다. 이 �
 
 2024년 현재, 성공적인 블로거들은 AI를 '도우미'로 활용하여 콘텐츠 제작 속도를 극대화하고 있습니다. 중요한 것은 AI가 모든 것을 대신하게 하는 것이 아니라, 반복적인 작업을 자동화하고 창의성에 집중하는 것입니다.
 
-![블로그 작성](https://images.unsplash.com/photo-1499750310107-5fef28a66643?w=800&h=400&fit=crop)
+![ChatGPT AI 도구를 활용한 블로그 글쓰기 및 콘텐츠 제작 워크플로우](/blog/ai-blog-writing/workflow.jpg)
 
 ## AI 블로그 작성 워크플로우
 
@@ -2767,7 +2767,7 @@ AI는 블로그 작성을 혁신적으로 바꿨습니다. 하지만 기억하�
     '6': {
       id: 6,
       title: 'ChatGPT 플러그인 활용 완벽 가이드',
-      thumbnail: 'https://images.unsplash.com/photo-1633356122544-f134324a6cee?w=1200&h=600&fit=crop',
+      thumbnail: '/blog/chatgpt-plugins/thumbnail.jpg',
       content: `
 # ChatGPT 플러그인 활용 완벽 가이드
 
@@ -2775,7 +2775,7 @@ ChatGPT Plus 구독자만 사용할 수 있는 플러그인 기능은 ChatGPT의
 
 2024년 현재, 1000개 이상의 플러그인이 출시되었으며, 매주 새로운 플러그인이 추가되고 있습니다. 올바른 플러그인 조합으로 ChatGPT를 개인 비서, 리서치 도구, 크리에이티브 파트너로 변신시킬 수 있습니다.
 
-![ChatGPT 플러그인](https://images.unsplash.com/photo-1633356122544-f134324a6cee?w=800&h=400&fit=crop)
+![ChatGPT Plus 플러그인 스토어 및 추천 확장 기능 목록](/blog/chatgpt-plugins/plugin-store.jpg)
 
 ## 플러그인 시작하기
 
@@ -3448,11 +3448,13 @@ export default async function BlogPostPage({ params }: { params: Promise<{ id: s
                     const alt = typeof props.alt === 'string' ? props.alt : '';
                     return (
                       <div className="relative w-full my-8 rounded-lg overflow-hidden">
-                        <img
+                        <Image
                           src={src}
                           alt={alt}
+                          width={800}
+                          height={400}
                           className="w-full h-auto rounded-lg"
-                          loading="lazy"
+                          priority={false}
                         />
                       </div>
                     );
